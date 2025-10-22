@@ -28,6 +28,7 @@ alias ....='cd ../../..'
 alias ta="tmux a"
 alias sz="source ~/.zshrc"
 alias v="nvim"
+alias c="clear"
 alias dot="cd ~/.dotfiles/"
 alias y="yazi"
 alias lg="lazygit"
