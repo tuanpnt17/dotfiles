@@ -28,11 +28,8 @@ keybind = control+insert=copy_to_clipboard
 shell-integration-features = ssh-env
 
 # Background
-background-image=~/Pictures/Wallpapers/walls-catppuccin-mocha/car-1.png
+background-image=~/Pictures/Wallpapers/walls-catppuccin-mocha/eclipse.jpg
 background-image-opacity=0.05
 background-image-position=center
 background-image-fit=cover
 background-blur=true
-
-
-
