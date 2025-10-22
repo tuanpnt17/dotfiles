@@ -1,0 +1,39 @@
+# === User Bin Directories ===
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+
+# === Oh My Zsh ===
+export ZSH="$HOME/.oh-my-zsh"
+
+# === Tmuxifier ===
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+
+# === Neovim ===
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
+# === Node Version Manager (NVM) ===
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$PATH:/opt/mssql-tools18/bin"
+export PNPM_HOME="/home/tuanpnt17/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+# === .NET SDK ===
+export DOTNET_ROOT=/usr/share/dotnet/
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+
+# === GoLang ===
+# export PATH=$PATH:/usr/local/go/bin
+
+# === Flutter ===
+# export PATH="$HOME/flutter/bin:$PATH"
+export PATH="$HOME/develop/flutter/bin:$PATH"
+export PATH="$HOME/Android/platform-tools/:$PATH"
+
+# === SDKMAN ===
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+

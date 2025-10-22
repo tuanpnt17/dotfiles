@@ -1,0 +1,16 @@
+# ZSH_THEME="robbyrussell"
+zstyle ':omz:update' mode auto      # update automatically without asking
+HIST_STAMPS="yyyy-mm-dd"
+
+# Load Oh My Zsh.
+source $ZSH/oh-my-zsh.sh
+
+# Input
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+
+# Fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+

@@ -5,24 +5,24 @@ return {
   opts = {
     default_file_explorer = false, -- Không ghi đè netrw (ta sẽ gọi bằng <leader>-)
     columns = {
-      "icon", -- Hiện icon file (nếu có nvim-web-devicons)
+      "icon",                      -- Hiện icon file (nếu có nvim-web-devicons)
       -- "permissions", "size", "mtime"
     },
-    delete_to_trash = true, -- Di chuyển vào trash thay vì xoá hẳn
+    delete_to_trash = true,               -- Di chuyển vào trash thay vì xoá hẳn
     skip_confirm_for_simple_edits = true, -- Đỡ phiền khi rename, move file nhỏ
     view_options = {
-      show_hidden = true, -- Hiện file .env, .gitignore, v.v.
+      show_hidden = true,                 -- Hiện file .env, .gitignore, v.v.
       is_always_hidden = function(name, _)
         return name == "node_modules"
-          or name == ".next"
-          or name == "dist"
-          or name == ".git"
-          or name == ".cache"
-          or name == ".vscode"
-          or name == ".idea"
-          or name == "obj"
-          or name == "bin"
-          or name == "build"
+            or name == ".next"
+            or name == "dist"
+            or name == ".git"
+            or name == ".cache"
+            or name == ".vscode"
+            or name == ".idea"
+            or name == "obj"
+            or name == "bin"
+            or name == "build"
       end,
     },
     float = {
@@ -65,8 +65,8 @@ return {
     {
       "-",
       function()
-        require("oil").open_float()
-        -- require("oil").open()
+        -- require("oil").open_float()
+        require("oil").open()
       end,
       desc = "Open parent directory (float)",
     },
@@ -75,8 +75,8 @@ return {
     {
       "_",
       function()
-        require("oil").open_float(vim.fn.getcwd())
-        -- require("oil").open(vim.fn.getcwd())
+        -- require("oil").open_float(vim.fn.getcwd())
+        require("oil").open(vim.fn.getcwd())
       end,
       desc = "Oil (Root Dir)",
     },
