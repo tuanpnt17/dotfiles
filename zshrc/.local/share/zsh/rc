@@ -1,6 +1,5 @@
+source ~/.local/share/zsh/startup
 source ~/.local/share/zsh/envs
 source ~/.local/share/zsh/configs
-source ~/.local/share/zsh/aliases
 source ~/.local/share/zsh/plugins
-source ~/.local/share/zsh/startup
-
+source ~/.local/share/zsh/aliases

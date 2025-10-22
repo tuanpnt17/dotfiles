@@ -6,13 +6,13 @@ c.content.blocking.method = "adblock"
 c.editor.command = ["vim", "{}"]
 c.fonts.web.size.default = 20
 
-catppuccin.setup(c, 'latte', True)
+catppuccin.setup(c, 'mocha', True)
 
 # dark mode setup
-c.colors.webpage.darkmode.enabled = False
+c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
 c.colors.webpage.darkmode.policy.images = 'never'
-config.set('colors.webpage.darkmode.enabled', False, 'file://*')
+config.set('colors.webpage.darkmode.enabled', True, 'file://*')
 
 # styles, cosmetics
 c.tabs.padding = {'top': 5, 'bottom': 5, 'left': 9, 'right': 9}
