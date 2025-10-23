@@ -126,11 +126,3 @@ vim.api.nvim_create_autocmd("FileType", {
     })
   end,
 })
-
--- Flutter
-vim.keymap.set('n', '<leader>va', function()
-  vim.cmd('normal! viw') -- Select word (AppBar)
-  vim.cmd('normal! f(')  -- Move to first (
-  vim.cmd('normal! %')   -- Select to matching )
-  vim.cmd('normal! o')   -- Go back to start of selection
-end, { desc = 'Visual select Widget(...) including name and args' })
