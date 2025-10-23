@@ -1,5 +1,3 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
@@ -9,21 +7,19 @@ vim.keymap.set({ "n", "i" }, "<C-s>", function()
   vim.cmd("wa")
 end, { desc = "Save all files" })
 
--- vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>", opts)
-
 -- Do things without affecting the registers
--- keymap.set("n", "x", '"_x')
--- keymap.set("n", "<Leader>p", '"0p')
--- keymap.set("n", "<Leader>P", '"0P')
--- keymap.set("v", "<Leader>p", '"0p')
--- keymap.set("n", "<Leader>c", '"_c')
--- keymap.set("n", "<Leader>C", '"_C')
--- keymap.set("v", "<Leader>c", '"_c')
--- keymap.set("v", "<Leader>C", '"_C')
--- keymap.set("n", "<Leader>d", '"_d')
--- keymap.set("n", "<Leader>D", '"_D')
--- keymap.set("v", "<Leader>d", '"_d')
--- keymap.set("v", "<Leader>D", '"_D')
+keymap.set("n", "x", '"_x')
+keymap.set("n", "<Leader>p", '"0p')
+keymap.set("n", "<Leader>P", '"0P')
+keymap.set("v", "<Leader>p", '"0p')
+keymap.set("n", "<Leader>c", '"_c')
+keymap.set("n", "<Leader>C", '"_C')
+keymap.set("v", "<Leader>c", '"_c')
+keymap.set("v", "<Leader>C", '"_C')
+keymap.set("n", "<Leader>d", '"_d')
+keymap.set("n", "<Leader>D", '"_D')
+keymap.set("v", "<Leader>d", '"_d')
+keymap.set("v", "<Leader>D", '"_D')
 
 -- Delete backward
 keymap.set("n", "db", "vbd", opts)
@@ -39,17 +35,8 @@ keymap.set("n", "<Leader>O", "O<Esc>^Da", opts)
 keymap.set("n", "sh", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
 
--- Resize window
-keymap.set("n", "<C-w><left>", "<C-w><")
-keymap.set("n", "<C-w><right>", "<C-w>>")
-keymap.set("n", "<C-w><up>", "<C-w>+")
-keymap.set("n", "<C-w><down>", "<C-w>-")
-
 -- Redo
 keymap.set("n", "U", "<C-r>", opts) -- Redo
-
--- Source file
-keymap.set("n", "<Leader>so", ":so %<CR>", opts) -- Source current file
 
 -- Diagnostics
 keymap.set("n", "<Leader>ac", function()
@@ -63,7 +50,6 @@ keymap.set("n", "<Leader>ac", function()
   end
 end, { noremap = true, silent = true, desc = "Copy diagnostic message to clipboard" }) -- Copy diagnostic message to clipboard
 
--- Show diagnostics in a floating window
 keymap.set(
   "n",
   "<Leader>af",
@@ -71,29 +57,16 @@ keymap.set(
   { noremap = true, silent = true, desc = "Show diagnostics in a floating window" }
 )
 
--- Go to next diagnostic
 keymap.set("n", "<Leader>an", vim.diagnostic.goto_next, {
   noremap = true,
   silent = true,
   desc = "Go to next error",
 })
 
--- Go to previous diagnostic
-keymap.set("n", "<Leader>ap", vim.diagnostic.goto_prev, { desc = "Go to next error" })
+keymap.set("n", "<Leader>ap", vim.diagnostic.goto_prev, { desc = "Go to prev error" })
 
--- Toggle autoformat
-vim.api.nvim_create_user_command("ToggleAutoformat", function()
-  require("custom.lsp").toggleAutoformat()
-end, {})
-
--- dotnet
-keymap.set("n", "<leader>qf", "<cmd>cclose<CR>", opts) -- Close quickfix window
-keymap.set("n", "<leader>qo", "<cmd>copen<CR>", opts) -- Open quickfix window
-
--- Load C# utilities
+-- Dotnet
 local csharp = require("custom.dotnet")
-
--- C# Keymaps (chỉ active khi ở file .cs)
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "cs",
   callback = function()
@@ -153,3 +126,11 @@ vim.api.nvim_create_autocmd("FileType", {
     })
   end,
 })
+
+-- Flutter
+vim.keymap.set('n', '<leader>va', function()
+  vim.cmd('normal! viw') -- Select word (AppBar)
+  vim.cmd('normal! f(')  -- Move to first (
+  vim.cmd('normal! %')   -- Select to matching )
+  vim.cmd('normal! o')   -- Go back to start of selection
+end, { desc = 'Visual select Widget(...) including name and args' })

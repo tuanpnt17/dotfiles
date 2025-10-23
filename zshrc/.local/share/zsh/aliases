@@ -1,4 +1,3 @@
-
 # File system
 alias ls='eza -lh --group-directories-first --icons=auto'
 alias lsa='ls -a'
@@ -36,6 +35,7 @@ alias oo="nvim ~/vaults/personal/Start.md"
 alias ld="lazydocker"
 alias za="zathura"
 alias neo="neofetch"
+alias fr="flutter run"
 
 # Maven Spring Boot
 alias mr="mvn spring-boot:run"

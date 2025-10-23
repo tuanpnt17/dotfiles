@@ -29,8 +29,7 @@ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 # export PATH=$PATH:/usr/local/go/bin
 
 # === Flutter ===
-# export PATH="$HOME/flutter/bin:$PATH"
-export PATH="$HOME/develop/flutter/bin:$PATH"
+export PATH="$HOME/Develop/flutter/bin:$PATH"
 export PATH="$HOME/Android/platform-tools/:$PATH"
 
 # === SDKMAN ===
