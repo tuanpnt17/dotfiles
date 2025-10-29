@@ -30,7 +30,9 @@ return {
       vim.cmd('normal! %')   -- Select to matching )
       vim.cmd('normal! o')   -- Go back to start of selection
     end, { desc = 'Visual select Widget' })
-    vim.keymap.set('n', '<leader>fld', ":Telescope flutter commands<Return>", { desc = "Telescope flutter" })
+    -- vim.keymap.set('n', '<leader>fld', ":Telescope flutter commands<Return>", { desc = "Telescope flutter" })
+    vim.keymap.set('n', '<leader>flr', ":FlutterRun<CR>", { desc = "Run" })
+    vim.keymap.set('n', '<leader>flR', ":FlutterRestart<CR>", { desc = "Restart" })
     vim.keymap.set('n', '<leader>fll', ":FlutterLogToggle<CR>", { desc = "Toggle log" })
     vim.keymap.set('n', '<leader>flc', ":FlutterLogToggle<CR>", { desc = "Clear log" })
     vim.keymap.set('n', '<leader>flo', ":FlutterOutlineToggle<CR>", { desc = "Toggle Outline" })

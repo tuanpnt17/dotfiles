@@ -31,6 +31,7 @@ export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 # === Flutter ===
 export PATH="$HOME/Develop/flutter/bin:$PATH"
 export PATH="$HOME/Android/platform-tools/:$PATH"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 # === SDKMAN ===
 export SDKMAN_DIR="$HOME/.sdkman"
