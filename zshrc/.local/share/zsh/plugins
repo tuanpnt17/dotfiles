@@ -3,3 +3,4 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+

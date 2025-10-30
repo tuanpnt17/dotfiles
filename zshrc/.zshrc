@@ -1,9 +1,13 @@
 source ~/.local/share/zsh/rc
 source $ZSH/oh-my-zsh.sh
+source ~/.dotfiles/zshrc/zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
 alias ls='eza -lh --group-directories-first --icons=auto'
 alias lsa='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
+
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
