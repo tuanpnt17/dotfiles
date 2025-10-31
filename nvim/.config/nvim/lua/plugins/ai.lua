@@ -10,13 +10,13 @@ return {
   --         auto_trigger = true,
   --         debounce = 70,
   --         keymap = {
-  --           accept = "<Tab>", -- bạn có thể đổi thành <Tab> nếu muốn
+  --           accept = "<Tab>",   -- bạn có thể đổi thành <Tab> nếu muốn
   --           next = "<M-]>",
   --           prev = "<M-[>",
   --           dismiss = "<C-]>",
   --         },
   --       },
-  --       panel = { enabled = false }, -- tắt panel để chỉ hiện inline
+  --       panel = { enabled = false },   -- tắt panel để chỉ hiện inline
   --     })
   --   end,
   -- },

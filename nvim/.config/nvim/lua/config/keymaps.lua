@@ -38,32 +38,6 @@ keymap.set("n", "sv", ":vsplit<Return>", opts)
 -- Redo
 keymap.set("n", "U", "<C-r>", opts) -- Redo
 
--- Diagnostics
-keymap.set("n", "<Leader>ac", function()
-  local diagnostics = vim.diagnostic.get(0, { lnum = vim.fn.line(".") - 1 })
-  if #diagnostics > 0 then
-    local message = diagnostics[1].message
-    vim.fn.setreg("+", message)
-    print("Copied diagnostic: " .. message)
-  else
-    print("No diagnostic at cursor")
-  end
-end, { noremap = true, silent = true, desc = "Copy diagnostic message to clipboard" }) -- Copy diagnostic message to clipboard
-
-keymap.set(
-  "n",
-  "<Leader>af",
-  vim.diagnostic.open_float,
-  { noremap = true, silent = true, desc = "Show diagnostics in a floating window" }
-)
-
-keymap.set("n", "<Leader>an", vim.diagnostic.goto_next, {
-  noremap = true,
-  silent = true,
-  desc = "Go to next error",
-})
-
-keymap.set("n", "<Leader>ap", vim.diagnostic.goto_prev, { desc = "Go to prev error" })
 
 -- Dotnet
 local csharp = require("custom.dotnet")

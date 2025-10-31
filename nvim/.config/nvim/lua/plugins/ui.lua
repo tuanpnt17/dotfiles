@@ -64,6 +64,13 @@ return {
           border = "rounded",
         },
       },
+      explorer = { enabled = false },
+      keys = {
+        { "<leader>fe", false },
+        { "<leader>fE", false },
+        { "<leader>E",  false },
+        { "<leader>e",  false },
+      },
     },
   },
 }
