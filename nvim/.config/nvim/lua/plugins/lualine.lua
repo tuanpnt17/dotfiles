@@ -176,7 +176,8 @@ return {
       }
 
       -- Right sections (lualine_x, lualine_y, lualine_z)
-      opts.sections.lualine_x = { clients_lsp,
+      opts.sections.lualine_x = {
+        -- clients_lsp,
         {
           "diff",
           symbols = {

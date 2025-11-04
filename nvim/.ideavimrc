@@ -72,7 +72,6 @@ nmap s <Plug>(easymotion-s)
 xmap s <Plug>(easymotion-s)
 omap s <Plug>(easymotion-s)
 
-
 " Which-Key plugin
 set which-key
 
