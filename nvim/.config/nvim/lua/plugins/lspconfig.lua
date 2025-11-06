@@ -13,7 +13,6 @@ return {
             },
           },
         },
-        roslyn = {},
       },
       diagnostics = {
         float = {

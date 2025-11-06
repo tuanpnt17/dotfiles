@@ -4,7 +4,7 @@ return {
     name = "catppuccin",
     priority = 1000,
     opts = {
-      flavor = "latte",              -- latte, frappe, macchiato, mocha
+      flavor = "mocha",              -- latte, frappe, macchiato, mocha
       transparent_background = true, -- disables setting the background color.
       float = {
         transparent = true,          -- enable transparent floating windows

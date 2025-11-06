@@ -40,6 +40,7 @@ alias mr="mvn spring-boot:run"
 
 # Project specific aliases
 alias fep="docker compose build frontend-staging && docker push hsms68/frontend-staging:latest"
+alias bep="docker build -f Dockerfile -t hsms68/backend-dev:latest . && docker push hsms68/backend-dev:latest"
 
 # Alias tmuxifier
 alias hsms="tmuxifier load-session hsms"

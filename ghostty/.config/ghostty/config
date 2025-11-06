@@ -13,7 +13,9 @@ window-padding-y = 3
 window-padding-balance = true
 confirm-close-surface=false
 resize-overlay = never
+gtk-titlebar = false
 gtk-toolbar-style = flat
+window-decoration = false
 
 # Cursor styling
 cursor-style = "block"
@@ -28,9 +30,11 @@ keybind = control+insert=copy_to_clipboard
 shell-integration-features = ssh-env
 
 # Background
-# background-image=~/Pictures/Wallpapers/walls-catppuccin-mocha/eclipse.jpg
-# background-image=~/Pictures/Wallpapers/manga/1334107.jpeg
-# background-image-opacity=0.05
-# background-image-position=center
-# background-image-fit=cover
-# background-blur=true
+background-blur-radius = 84
+# background-image=~/Pictures/Wallpapers/walls-catppuccin-mocha/fox.png
+background-image=~/Pictures/Wallpapers/manga/kakashi_1.jpg
+background-image-opacity=0.02
+background-image-position=center
+background-image-fit=cover
+background-blur=0
+minimum-contrast=1.1

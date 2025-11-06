@@ -4,11 +4,11 @@ local config = wezterm.config_builder()
 local io = require("io")
 local os = require("os")
 local brightness = 0.03
-local fontSize = 15
+local fontSize = 13
 
 -- image setting
 local home = os.getenv("HOME")
-local background_folder = home .. "/Pictures/Wallpapers/walls-catppuccin-mocha"
+local background_folder = home .. "/Pictures/Wallpapers/manga"
 local function pick_random_background(folder)
   local handle = io.popen('ls "' .. folder .. '"')
   if handle ~= nil then
@@ -63,7 +63,7 @@ config.enable_wayland = false
 config.keys = {
   {
     key = "b",
-    mods = "CTRL|SHIFT",
+    mods = "ALT|CTRL|SHIFT",
     action = wezterm.action_callback(function(window)
       bg_image = pick_random_background(background_folder) or ""
       if bg_image then
@@ -78,12 +78,12 @@ config.keys = {
   },
   {
     key = "L",
-    mods = "CTRL|SHIFT",
+    mods = "ALT|CTRL|SHIFT",
     action = wezterm.action.OpenLinkAtMouseCursor,
   },
   {
     key = ">",
-    mods = "CTRL|SHIFT",
+    mods = "ALT|CTRL|SHIFT",
     action = wezterm.action_callback(function(window)
       brightness = math.min(brightness + 0.01, 1.0)
       window:set_config_overrides({
@@ -98,7 +98,7 @@ config.keys = {
   },
   {
     key = "<",
-    mods = "CTRL|SHIFT",
+    mods = "ALT|CTRL|SHIFT",
     action = wezterm.action_callback(function(window)
       brightness = math.max(brightness - 0.01, 0.01)
       window:set_config_overrides({
@@ -113,7 +113,7 @@ config.keys = {
   },
   {
     key = "j",
-    mods = "CTRL|SHIFT",
+    mods = "ALT|CTRL|SHIFT",
     action = wezterm.action_callback(function(window)
       fontSize = math.max(fontSize - 1, 10)
       window:set_config_overrides({
@@ -124,7 +124,7 @@ config.keys = {
   },
   {
     key = "k",
-    mods = "CTRL|SHIFT",
+    mods = "ALT|CTRL|SHIFT",
     action = wezterm.action_callback(function(window)
       fontSize = math.min(fontSize + 1, 25)
       window:set_config_overrides({
