@@ -38,12 +38,51 @@ if [ $# -eq 3 ]; then
     }' > "$STATE_FILE"
 
   tmux display-message "👨‍💻 Started $SESSIONS sessions ($WORK_MIN/$BREAK_MIN min)"
+  notify-send -t 5000 "🍅 Pomodoro started!" "👨‍💻 Started $SESSIONS sessions ($WORK_MIN/$BREAK_MIN min)"
+  play_sound
   exit 0
 fi
 
 if [ "${1:-}" = "stop" ]; then
   rm -f "$STATE_FILE"
   tmux display-message "Pomodoro stopped"
+  notify-send -t 3000 "🍅 Pomodoro stopped"
+  play_sound
+  exit 0
+fi
+
+if [ "${1:-}" = "skip" ]; then
+  if [ ! -f "$STATE_FILE" ]; then
+    tmux display-message "No active Pomodoro session to skip."
+    exit 0
+  fi
+  mode=$(jq -r .mode "$STATE_FILE")
+
+  current=$(jq -r .current "$STATE_FILE")
+  sessions=$(jq -r .sessions "$STATE_FILE")
+
+  if [ "$mode" = "work" ]; then
+    jq --arg mode "break" \
+       --argjson start "$(date +%s)" \
+       '.mode=$mode | .start=$start' \
+       "$STATE_FILE" > "$STATE_FILE.tmp" && mv "$STATE_FILE.tmp" "$STATE_FILE"
+    tmux display-message "☕ Break #$current started (skipped work)"
+  else
+    next=$((current + 1))
+    if [ "$next" -gt "$sessions" ]; then
+      tmux display-message "✅ All sessions done!"
+      rm -f "$STATE_FILE"
+      exit 0
+    fi
+    jq --arg mode "work" \
+       --argjson start "$(date +%s)" \
+       --argjson current "$next" \
+       '.mode=$mode | .start=$start | .current=$current' \
+       "$STATE_FILE" > "$STATE_FILE.tmp" && mv "$STATE_FILE.tmp" "$STATE_FILE"
+    tmux display-message "👨‍💻 Work #$next started (skipped break)"
+  fi
+
+  play_sound
   exit 0
 fi
 

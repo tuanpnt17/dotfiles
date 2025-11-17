@@ -3,12 +3,12 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 local io = require("io")
 local os = require("os")
-local brightness = 0.03
+local brightness = 0.02
 local fontSize = 13
 
 -- image setting
 local home = os.getenv("HOME")
-local background_folder = home .. "/Pictures/Wallpapers/manga"
+local background_folder = home .. "/Pictures/Wallpapers/walls-catppuccin-mocha"
 local function pick_random_background(folder)
   local handle = io.popen('ls "' .. folder .. '"')
   if handle ~= nil then
@@ -36,9 +36,7 @@ config.window_background_image_hsb = {
 }
 
 -- default background
--- local bg_image = "/home/tuanpnt17/Pictures/Personal/2025.png"
 local bg_image = ""
-
 config.window_background_image = bg_image
 -- end image setting
 
@@ -47,9 +45,9 @@ config.window_background_opacity = 1.0
 config.macos_window_background_blur = 85
 config.window_padding = {
   left = 7,
-  right = 0,
+  right = 7,
   top = 7,
-  bottom = 5,
+  bottom = 0,
 }
 
 config.color_scheme = "Catppuccin Mocha"
@@ -57,13 +55,13 @@ config.font = wezterm.font("CaskaydiaMono Nerd Font", { weight = "Medium", stret
 config.font_size = fontSize
 config.window_decorations = "NONE"
 config.enable_tab_bar = false
-config.enable_wayland = false
+config.enable_wayland = true
 
 -- keys
 config.keys = {
   {
     key = "b",
-    mods = "ALT|CTRL|SHIFT",
+    mods = "CTRL|SHIFT",
     action = wezterm.action_callback(function(window)
       bg_image = pick_random_background(background_folder) or ""
       if bg_image then
@@ -78,12 +76,12 @@ config.keys = {
   },
   {
     key = "L",
-    mods = "ALT|CTRL|SHIFT",
+    mods = "CTRL|SHIFT",
     action = wezterm.action.OpenLinkAtMouseCursor,
   },
   {
     key = ">",
-    mods = "ALT|CTRL|SHIFT",
+    mods = "CTRL|SHIFT",
     action = wezterm.action_callback(function(window)
       brightness = math.min(brightness + 0.01, 1.0)
       window:set_config_overrides({
@@ -98,7 +96,7 @@ config.keys = {
   },
   {
     key = "<",
-    mods = "ALT|CTRL|SHIFT",
+    mods = "CTRL|SHIFT",
     action = wezterm.action_callback(function(window)
       brightness = math.max(brightness - 0.01, 0.01)
       window:set_config_overrides({

@@ -9,6 +9,8 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.showtabline = 0
 vim.opt.spell = false
 vim.opt.spelllang = {}
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
 
 -- vim.g.lazyvim_picker = "telescope"
 -- vim.g.lazyvim_picker = "fzf"

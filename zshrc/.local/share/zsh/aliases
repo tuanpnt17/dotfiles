@@ -35,6 +35,14 @@ alias za="zathura"
 alias neo="neofetch"
 alias fr="flutter run"
 
+# Configs
+alias zshc="nvim ~/.zshrc"
+alias nvimc="cd ~/.config//nvim && nvim"
+alias tmuxc="nvim ~/.tmux.conf"
+alias wezc="nvim ~/.wezterm.lua"
+alias gtc="nvim ~/.config/ghostty/config"
+alias hyprc="nvim ~/.config/hypr/hyprland.conf"
+
 # Maven Spring Boot
 alias mr="mvn spring-boot:run"
 

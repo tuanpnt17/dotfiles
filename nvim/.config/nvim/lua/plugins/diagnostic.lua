@@ -160,7 +160,7 @@ return {
 
     local keymap = vim.keymap
     -- Diagnostics
-    keymap.set("n", "<Leader>ec", function()
+    keymap.set("n", "<Leader>xc", function()
       local diagnostics = vim.diagnostic.get(0, { lnum = vim.fn.line(".") - 1 })
       if #diagnostics > 0 then
         local message = diagnostics[1].message
@@ -173,16 +173,16 @@ return {
 
     keymap.set(
       "n",
-      "<Leader>ef",
+      "<Leader>xf",
       vim.diagnostic.open_float,
       { noremap = true, silent = true, desc = "Show diagnostics in a floating window" }
     )
 
-    keymap.set("n", "<Leader>en", function()
+    keymap.set("n", "<Leader>xn", function()
       vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })
     end, { noremap = true, silent = true, desc = "Go to next error" })
 
-    keymap.set("n", "<Leader>ep", function()
+    keymap.set("n", "<Leader>xp", function()
       vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })
     end, { noremap = true, silent = true, desc = "Go to prev error" })
   end,
