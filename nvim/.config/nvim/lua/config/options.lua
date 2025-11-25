@@ -13,8 +13,8 @@ vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
 
 -- vim.g.lazyvim_picker = "telescope"
--- vim.g.lazyvim_picker = "fzf"
-vim.g.lazyvim_picker = "snacks"
+vim.g.lazyvim_picker = "fzf"
+-- vim.g.lazyvim_picker = "snacks"
 
 -- eslint
 vim.g.lazyvim_eslint_auto_format = true

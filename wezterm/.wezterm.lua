@@ -8,7 +8,7 @@ local fontSize = 13
 
 -- image setting
 local home = os.getenv("HOME")
-local background_folder = home .. "/Pictures/Wallpapers/walls-catppuccin-mocha"
+local background_folder = home .. "/Pictures/Wallpapers/manga"
 local function pick_random_background(folder)
   local handle = io.popen('ls "' .. folder .. '"')
   if handle ~= nil then

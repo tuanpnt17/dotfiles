@@ -13,4 +13,5 @@ settings:
   content.notifications.enabled:
     https://hsms.io.vn: true
     https://staging.hsms.io.vn: true
+    https://www.messenger.com: true
     https://www.youtube.com: false
