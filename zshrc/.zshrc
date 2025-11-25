@@ -1,6 +1,6 @@
 source ~/.local/share/zsh/rc
 source $ZSH/oh-my-zsh.sh
-source ~/.dotfiles/zshrc/zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source ~/.dotfiles/zshrc/zsh-syntax-highlighting/themes/catppuccin_latte-zsh-syntax-highlighting.zsh
 
 alias ls='eza -lh --group-directories-first --icons=auto'
 alias lsa='ls -a'
@@ -21,3 +21,5 @@ export PATH=/home/tuanpnt17/.opencode/bin:$PATH
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+export SDL_VIDEODRIVER=wayland

@@ -1,6 +1,6 @@
 import catppuccin
 
-theme_mode = 'dark'
+theme_mode = 'light'
 
 config.load_autoconfig()
 # config.source('gruvbox.py')
