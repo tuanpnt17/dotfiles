@@ -4,6 +4,20 @@ return {
     opts = {
       inlay_hints = { enabled = false },
       servers = {
+        vtsls = {
+          settings = {
+            typescript = {
+              preferences = {
+                importModuleSpecifier = "non-relative",
+              },
+            },
+            javascript = {
+              preferences = {
+                importModuleSpecifier = "non-relative",
+              },
+            },
+          },
+        },
         html = {},
         cssls = {},
         yamlls = {

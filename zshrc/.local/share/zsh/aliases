@@ -36,7 +36,7 @@ alias neo="neofetch"
 alias fr="flutter run"
 
 # Configs
-alias zshc="nvim ~/.zshrc"
+alias zshc="nvim ~/.dotfiles/zshrc/.local/share/zsh/rc"
 alias nvimc="cd ~/.config//nvim && nvim"
 alias tmuxc="nvim ~/.tmux.conf"
 alias wezc="nvim ~/.wezterm.lua"
@@ -47,8 +47,10 @@ alias hyprc="nvim ~/.config/hypr/hyprland.conf"
 alias mr="mvn spring-boot:run"
 
 # Project specific aliases
+alias pd="pnpm run dev"
 alias fep="docker compose build frontend-staging && docker push hsms68/frontend-staging:latest"
 alias bep="docker build -f Dockerfile -t hsms68/backend-dev:latest . && docker push hsms68/backend-dev:latest"
+
 
 # Alias tmuxifier
 alias hsms="tmuxifier load-session hsms"
