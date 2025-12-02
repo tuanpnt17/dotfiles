@@ -11,6 +11,7 @@ vim.opt.spell = false
 vim.opt.spelllang = {}
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
+vim.opt.wrap = true
 
 -- vim.g.lazyvim_picker = "telescope"
 vim.g.lazyvim_picker = "fzf"
