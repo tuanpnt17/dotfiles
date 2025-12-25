@@ -19,8 +19,6 @@ dap.configurations.cs = {
     program = function()
       -- return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/src/", "file")
       return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/bin/Debug/net9.0/", "file")
-
-      -- return require("dap-dll-autopicker").build_dll_path()
     end,
 
     -- justMyCode = false,
@@ -59,9 +57,5 @@ map("n", "<F8>", "<Cmd>lua require'dap'.step_out()<CR>", opts)
 -- map("n", "<F12>", "<Cmd>lua require'dap'.step_out()<CR>", opts)
 map("n", "<leader>dr", "<Cmd>lua require'dap'.repl.open()<CR>", opts)
 map("n", "<leader>dl", "<Cmd>lua require'dap'.run_last()<CR>", opts)
-map(
-  "n",
-  "<leader>dt",
-  "<Cmd>lua require('neotest').run.run({strategy = 'dap'})<CR>",
-  { noremap = true, silent = true, desc = "debug nearest test" }
-)
+map("n", "<leader>dt", "<Cmd>lua require('neotest').run.run({strategy = 'dap'})<CR>",
+  { noremap = true, silent = true, desc = 'debug nearest test' })

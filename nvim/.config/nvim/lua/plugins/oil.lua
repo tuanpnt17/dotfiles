@@ -90,9 +90,9 @@ return {
     keymaps = {
       ["<Esc>"] = "actions.close",
       ["q"] = "actions.close",
-      ["l"] = "actions.select",
+      -- ["l"] = "actions.select",
       ["<CR>"] = "actions.select",
-      ["h"] = "actions.parent",
+      -- ["h"] = "actions.parent",
       ["-"] = "actions.parent",
       ["\\"] = "actions.select_vsplit",
       ["="] = "actions.select_split",

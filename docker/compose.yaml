@@ -1,0 +1,23 @@
+services:
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: TuanPNT@15743
+    volumes:
+      - ~/Data/mongo/:/data/db
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    restart: always
+    container_name: sqlserver
+    ports:
+      - "1433:1433"
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "TuanDz@ZD322"
+      MSSQL_PID: "Developer"
+    volumes:
+      - ~/Data/mssql/:/var/opt/mssql

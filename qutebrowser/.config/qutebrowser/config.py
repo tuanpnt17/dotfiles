@@ -22,7 +22,7 @@ c.tabs.indicator.width = 0 # no tab indicators
 # c.window.transparent = True # apparently not needed
 c.tabs.width = '7%'
 # hidetab
-c.tabs.show = "never"
+# c.tabs.show = "never"
 
 # fonts
 c.fonts.default_family = []
@@ -38,7 +38,7 @@ c.url.searchengines = {
         "gs": "https://scholar.google.com/scholar?q={}",
         }
 c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'history', 'filesystem']
-c.url.start_pages = ["https://app.daily.dev/?utm_source=landing&utm_medium=cta&utm_campaign=landing_conversions"]
+c.url.start_pages = ["https://start.duckduckgo.com/"]
 c.window.hide_decoration = True
 
 # hide status bar
