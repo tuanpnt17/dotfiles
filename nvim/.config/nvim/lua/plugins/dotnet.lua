@@ -12,7 +12,9 @@ return {
         enabled = true,            -- Enable builtin roslyn lsp
         roslynator_enabled = true, -- Automatically enable roslynator analyzer
         analyzer_assemblies = {},  -- Any additional roslyn analyzers you might use like SonarAnalyzer.CSharp
-        config = {},
+        config = {
+
+        },
       },
       debugger = {
         -- Path to custom coreclr DAP adapter

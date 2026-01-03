@@ -29,7 +29,7 @@ return {
         require("dap").adapters["netcoredbg"] = netcoredbg_adapter
         require("dap").adapters["coreclr"] = netcoredbg_adapter
       end
-      for _, lang in ipairs({ "cs", "fsharp", "vb" }) do
+      for _, lang in ipairs({ "cs", "fsharp", "vb", "razor" }) do
         if not dap.configurations[lang] then
           dap.configurations[lang] = {
             {

@@ -54,9 +54,3 @@ require("lazy").setup({
     },
   },
 })
-
-require("neotest").setup({
-  adapters = {
-    require("neotest-dotnet")
-  }
-})
