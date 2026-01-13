@@ -4,7 +4,7 @@ config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 # Font
 font-family = "CaskaydiaMono Nerd Font"
 font-style = Regular
-font-size = 10
+font-size = 11
 
 # Window
 window-theme = ghostty
@@ -20,27 +20,15 @@ window-decoration = false
 # Cursor styling
 cursor-style = "block"
 cursor-style-blink = false
+adjust-cursor-thickness = 1
 shell-integration-features = no-cursor
-
-# Keyboard bindings
-keybind = shift+insert=paste_from_clipboard
-keybind = control+insert=copy_to_clipboard
-keybind = super+control+shift+alt+arrow_down=resize_split:down,100
-keybind = super+control+shift+alt+arrow_up=resize_split:up,100
-keybind = super+control+shift+alt+arrow_left=resize_split:left,100
-keybind = super+control+shift+alt+arrow_right=resize_split:right,100
 
 # SSH session terminfo
 shell-integration-features = ssh-env
 
 # Background
-# background-blur-radius = 84
-# background-image=~/Pictures/Wallpapers/manga/mikasa.jpg
-# background-image-opacity=0.01
-# background-image-position=top-center
-# background-image-fit=cover
-# background-blur=0
-# minimum-contrast=1.1
+background-opacity = 0.85
+background-blur-radius = 0
 
 # Slowdown mouse scrolling
 mouse-scroll-multiplier = 0.95

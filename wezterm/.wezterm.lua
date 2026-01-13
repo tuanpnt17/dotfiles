@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 local io = require("io")
 local os = require("os")
 local brightness = 0.02
-local fontSize = 13
+local fontSize = 11
 
 -- image setting
 local home = os.getenv("HOME")
@@ -38,6 +38,12 @@ config.window_background_image_hsb = {
 -- default background
 local bg_image = ""
 config.window_background_image = bg_image
+
+-- Make the background transparent
+-- config.colors = {
+--   background = "none",
+-- }
+
 -- end image setting
 
 -- window setting

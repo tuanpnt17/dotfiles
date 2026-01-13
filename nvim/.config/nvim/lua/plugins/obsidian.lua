@@ -26,7 +26,7 @@ return {
         default_tags = { "daily" },
       },
       footer = {
-        enabled = true,
+        enabled = false,
       },
       ui = {
         enable = false,

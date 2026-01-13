@@ -13,7 +13,6 @@ return {
         roslynator_enabled = true, -- Automatically enable roslynator analyzer
         analyzer_assemblies = {},  -- Any additional roslyn analyzers you might use like SonarAnalyzer.CSharp
         config = {
-
         },
       },
       debugger = {
@@ -100,7 +99,7 @@ return {
       },
       server = {
         ---@type nil | "Off" | "Critical" | "Error" | "Warning" | "Information" | "Verbose" | "All"
-        log_level = "All",
+        log_level = "Off",
       },
       -- choose which picker to use with the plugin
       -- possible values are "telescope" | "fzf" | "snacks" | "basic"

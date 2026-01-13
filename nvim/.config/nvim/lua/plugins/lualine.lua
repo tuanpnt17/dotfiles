@@ -1,3 +1,4 @@
+---@diagnostic disable: unused-function
 return {
   -- {
   --   "nvim-lualine/lualine.nvim",
@@ -211,6 +212,4 @@ return {
       }
     end,
   },
-
-
 }

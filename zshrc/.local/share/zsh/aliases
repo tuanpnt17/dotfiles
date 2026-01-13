@@ -58,4 +58,6 @@ alias dsa="tmuxifier load-session dsa"
 # alias tna="tmuxifier load-session tna"
 # alias config="tmuxifier load-session config"
 
+alias dwr="dotnet watch run"
+
 
