@@ -2,6 +2,22 @@ return {
   {
     "chrisgrieser/nvim-origami",
     event = "VeryLazy",
-    opts = {}, -- needed even when using default config
+    opts = {
+      foldtext = {
+        enabled = true,
+        padding = 3,
+        lineCount = {
+          template = "󰦸 %d lines", -- `%d` is replaced with the number of folded lines
+          hlgroup = "Comment",
+        },
+        diagnosticsCount = true, -- uses hlgroups and icons from `vim.diagnostic.config().signs`
+        gitsignsCount = true,    -- requires `gitsigns.nvim`
+        disableOnFt = { "snacks_picker_input" }, ---@type string[]
+      },
+      autoFold = {
+        enabled = false,
+        kinds = { "comment", "imports", "region" }, ---@type lsp.FoldingRangeKind[]
+      },
+    }, -- needed even when using default config
   },
 }

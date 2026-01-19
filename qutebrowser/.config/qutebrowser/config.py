@@ -22,7 +22,7 @@ c.tabs.indicator.width = 0 # no tab indicators
 # c.window.transparent = True # apparently not needed
 c.tabs.width = '7%'
 # hidetab
-# c.tabs.show = "never"
+c.tabs.show = "never"
 
 # fonts
 c.fonts.default_family = []

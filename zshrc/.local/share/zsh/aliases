@@ -58,6 +58,9 @@ alias dsa="tmuxifier load-session dsa"
 # alias tna="tmuxifier load-session tna"
 # alias config="tmuxifier load-session config"
 
+# Dotnet
 alias dwr="dotnet watch run"
 
+# Cargo
+alias cr="cargo run"
 

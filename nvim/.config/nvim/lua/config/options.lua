@@ -29,3 +29,6 @@ vim.g.lazyvim_eslint_auto_format = true
 vim.api.nvim_create_user_command("ToggleAutoformat", function()
   require("custom.lsp").toggleAutoformat()
 end, {})
+
+-- provided by rust-analyzer.
+vim.g.lazyvim_rust_diagnostics = "rust-analyzer"
